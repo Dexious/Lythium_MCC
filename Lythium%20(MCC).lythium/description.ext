@@ -1,0 +1,68 @@
+//loadScreen = "core\img\btc.paa";
+author = Dexter;
+onLoadName = Lythium (MCC);
+//onLoadMission = www.blacktemplars.altervista.org;
+
+enableDebugConsole = 1;
+respawnOnStart = 0;
+/*respawn = 2;
+respawnDelay = 5;
+
+respawnButton = 1;
+respawnVehicleDelay = 30;
+respawnTemplates[] = {"MenuPosition","MenuInventory","Tickets"};
+respawnTemplatesVirtual[] = {};*/
+
+disabledAI = 1;
+joinUnassigned = 1;
+aiKills  = 0;
+
+/*class Header
+{
+	gameType = ZGM;
+	minPlayers = 1;
+	maxPlayers = 448;
+};*/
+
+#include "LT\LTmenu.hpp"
+#include "taw_vd\GUI.h"
+#include "VVS\menu.h"
+#include "R3F_LOG\desc_include.h"
+
+
+class CfgFunctions {
+	#include "taw_vd\CfgFunctions.hpp"
+	#include "LT\cfgfunctions.hpp"
+	#include "VVS\Functions.h"
+};  
+
+class Params
+{	
+	class SaveDelay{
+		title = "Save Game Delay (minutes)";
+		values[] = {300,600,900,1200,1500,1800,2100,2400,2700,3000,3300,3600,10};
+		texts[] =  {"5min","10min","15min","20min","25min","30min","35min","40min","45min","50min","55min","60min","10sec [DEBUG]"};
+		default = 3600;
+	};
+
+	class LoadSave{
+		title = "Load Save Game ?";
+		values[] = {0,1};
+		texts[] =  {"NO","YES"};
+		default = 0;
+	};
+	
+	class WipeSave1{
+		title = "Wipe Savegame ?";
+		values[] = {0,1};
+		texts[] =  {"NO","YES"};
+		default = 0;
+	};
+	
+	class WipeSave2{
+		title = "Rly Wipe Savegame ?";
+		values[] = {0,1};
+		texts[] =  {"NO","YES"};
+		default = 0;
+	};
+};
